@@ -1,4 +1,4 @@
-show = drun
+show=drun
 term=kitty
 show_all=true
 gtk_dark=false
