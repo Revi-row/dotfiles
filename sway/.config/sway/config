@@ -25,10 +25,11 @@ set $file_explorer nautilus
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg ~/Imágenes/Wallpaper/Wallpaper2.png fill
 #
-# Example configuration:
-#
-output HDMI-A-1 resolution 2560x1440@143.912Hz position 1920,0
-output DP-1 resolution 1920x1080@144.001Hz position 0,0
+set $M1 "HDMI-A-1"
+set $M2 "DP-1"
+
+output $M1 resolution 2560x1440@143.912Hz position 1920,0
+output $M2 resolution 1920x1080@144.001Hz position 0,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -164,6 +165,16 @@ client.placeholder      #AC82E9 #141216 #d8cab8 #AC82E9 #AC82E9
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+    workspace 1 output $M2
+    workspace 2 output $M1
+    workspace 3 output $M1
+    workspace 4 output $M1
+    workspace 5 output $M1
+    workspace 6 output $M1
+    workspace 7 output $M1
+    workspace 8 output $M1
+    workspace 9 output $M1
+    workspace 10 output $M1
 
     # Move specific apps to workspaces
     assign [instance="spotify"] workspace number 4

@@ -8,6 +8,7 @@ echo "   3) Sway"
 echo "   4) Rofi"
 echo "   5) Wofi"
 echo "   6) Waybar"
+echo "   7) Fastfetch"
 read X
 echo " "
 case $X in
@@ -52,6 +53,25 @@ case $X in
             *)
                 echo -n "ERROR";;
         esac;;
+    6)
+        echo "Selecciona una archivo"
+        echo "   1) config"
+        echo "   2) style.css"
+        read Y
+
+        case $Y in
+            1) 
+                code ~/.config/waybar/config
+                echo "Abriendo '~/.config/waybar/config'";;
+            2)
+                code ~/.config/waybar/style.css
+                echo "Abriendo '~/.config/waybar/style.css'";;
+            *)
+                echo -n "ERROR";;
+        esac;;
+    7)
+        code ~/.config/fastfetch/config.jsonc
+        echo "Abriendo '~/.config/fastfetch/config.jsonc'";;
     *)
         echo -n "ERROR";;
 esac
