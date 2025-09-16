@@ -1,0 +1,58 @@
+#!/bin/sh
+
+clear
+echo "Selecciona una aplicacion"
+echo "   1) Kitty"
+echo "   2) Starship"
+echo "   3) Sway"
+echo "   4) Rofi"
+echo "   5) Wofi"
+echo "   6) Waybar"
+read X
+echo " "
+case $X in
+    1)
+        echo "Selecciona una archivo"
+        echo "   1) kitty.conf"
+        echo "   2) current-theme.conf"
+        read Y
+
+        case $Y in
+            1) 
+                code ~/.config/kitty/kitty.conf
+                echo "Abriendo '~/.config/kitty/kitty.conf'";;
+            2)
+                code ~/.config/kitty/current-theme.conf
+                echo "Abriendo '~/.config/kitty/current-theme.conf'";;
+            *)
+                echo -n "ERROR";;
+        esac;;
+    2)
+        code ~/.config/starship.toml
+        echo "Abriendo '~/.config/starship.toml'";;
+    3)
+        code ~/.config/sway/config
+        echo "Abriendo '~/.config/sway/config'";;
+    4)
+        code ~/.config/rofi/config.rasi
+        echo "Abriendo '~/.config/rofi/config.rasi'";;
+    5)
+        echo "Selecciona una archivo"
+        echo "   1) config"
+        echo "   2) style.css"
+        read Y
+
+        case $Y in
+            1) 
+                code ~/.config/wofi/config
+                echo "Abriendo '~/.config/wofi/config'";;
+            2)
+                code ~/.config/wofi/style.css
+                echo "Abriendo '~/.config/wofi/style.css'";;
+            *)
+                echo -n "ERROR";;
+        esac;;
+    *)
+        echo -n "ERROR";;
+esac
+
