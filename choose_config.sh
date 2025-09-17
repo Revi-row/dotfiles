@@ -9,6 +9,7 @@ echo "   4) Rofi"
 echo "   5) Wofi"
 echo "   6) Waybar"
 echo "   7) Fastfetch"
+echo "   8) Alias"
 read X
 echo " "
 case $X in
@@ -72,6 +73,26 @@ case $X in
     7)
         code ~/.config/fastfetch/config.jsonc
         echo "Abriendo '~/.config/fastfetch/config.jsonc'";;
+    8)
+        echo "Selecciona una SO"
+        echo "   1) EndevourOS"
+        echo "   2) Ubuntu"
+        echo "   3) Mint"
+        read Y
+
+        case $Y in
+            1) 
+                code ~/.config/bash_aliases_ed
+                echo "Abriendo '~/.config/bash_aliases_ed'";;
+            2)
+                code ~/.config/bash_aliases_ub
+                echo "Abriendo '~/.config/bash_aliases_ub'";;
+            2)
+                code ~/.config/bash_aliases_emt
+                echo "Abriendo '~/.config/bash_aliases_mt'";;
+            *)
+                echo -n "ERROR";;
+        esac;;
     *)
         echo -n "ERROR";;
 esac

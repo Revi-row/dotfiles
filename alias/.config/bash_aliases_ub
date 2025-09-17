@@ -16,4 +16,4 @@ alias snap='sudo snap install'
 alias zen='flatpak run app.zen_browser.zen'
 
     # Modificar apps
-alias config='~/dotfiles/choose_config.sh'
+alias conf='~/dotfiles/choose_config.sh'
