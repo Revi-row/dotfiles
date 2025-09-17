@@ -1,4 +1,4 @@
-l    # Modificar y recargar bash
+    # Modificar y recargar bash
 alias reload_bash='source ~/.bashrc'
 alias aliases='code ~/.bash_aliases'
 
@@ -10,7 +10,7 @@ alias purge='sudo apt purge'
 alias snap='sudo snap install'
 
     # Movimiento de carpetas
-alias cd-='cd ~-'
+#alias cd-='cd ~-'
 
     # Apps
 alias zen='flatpak run app.zen_browser.zen'
