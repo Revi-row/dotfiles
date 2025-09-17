@@ -1,6 +1,7 @@
     # Modificar y recargar bash
 alias reload_bash='source ~/.bashrc'
 alias aliases='code ~/.bash_aliases'
+alias c='clear'
 
     # Instladores
 alias install='sudo apt install'
