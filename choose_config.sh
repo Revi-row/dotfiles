@@ -87,8 +87,8 @@ case $X in
             2)
                 code ~/.config/bash_aliases_ub
                 echo "Abriendo '~/.config/bash_aliases_ub'";;
-            2)
-                code ~/.config/bash_aliases_emt
+            3)
+                code ~/.config/bash_aliases_mt
                 echo "Abriendo '~/.config/bash_aliases_mt'";;
             *)
                 echo -n "ERROR";;
