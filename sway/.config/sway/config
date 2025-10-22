@@ -66,8 +66,8 @@ input type:keyboard
 # Read `man 5 sway-input` for more information about this section.
 
 # Gaps between windows
-gaps inner 2px
-gaps outer 2px
+gaps inner 7px
+gaps outer 5px
 
 # Border width, I prefer THIN borders ^-^
 default_border pixel 1px
@@ -179,6 +179,9 @@ client.placeholder      #AC82E9 #141216 #d8cab8 #AC82E9 #AC82E9
     # Move specific apps to workspaces
     assign [instance="spotify"] workspace number 4
 
+    # Auto floating
+    for_window [sandbox_app_id="org.prismlauncher.PrismLauncher"] floating enable, resize 600 400
+
 #
 # Layout stuff:
 #
@@ -225,7 +228,7 @@ client.placeholder      #AC82E9 #141216 #d8cab8 #AC82E9 #AC82E9
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
-    # up will shrink the containers height
+    # up will shrink the contafiners height
     # down will grow the containers height
     #bindsym $left resize shrink width 10px
     #bindsym $down resize grow height 10px

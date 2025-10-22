@@ -9,7 +9,7 @@
   "modules-left": [
   ],
   "modules-center": [
-    "sway/workspaces"
+    "hyprland/workspaces"
   ],
   "modules-right": [
     "battery",
@@ -17,9 +17,10 @@
     "tray",
     "clock"
   ],
-  "sway/workspaces": {
+  "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
+    "active-only": false,
     "tooltip": false,
     "format": "{icon}",
     "persistent-workspaces":{
@@ -32,13 +33,13 @@
       "7": [],
       "8": [],
       "9": [],
-      "10": []
+      "10": []  
     },
     "format-icons": {
-      "urgent": "",
-      "focused": "",
-      "default": "",
-      "persistent": ""
+      "urgent": " ",
+      "focused": " ",
+      "default": " ",
+      "persistent": " "
     }
   },
   "custom/applauncher": {
