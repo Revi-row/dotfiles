@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[ ](bg:o1)\
+[╭]()\
 $os\
 $username\
 [](bg:base fg:o1)\
@@ -83,6 +83,7 @@ o5 = "#ffcb90"
 o6 = "#fff4df"
 
 [os]
+format = '(fg:current_line)[](fg:o1)[$symbol ](fg:mantle bg:o1)'
 disabled = true
 style = "bg:o1 fg:mantle"
 
@@ -108,10 +109,11 @@ Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
 
 [username]
+format = '(fg:current_line)[](fg:o1)[ $user ](fg:mantle bg:o1)'
 show_always = true
 style_user = "bg:o1 fg:mantle"
 style_root = "bg:o1 fg:mantle"
-format = '[ $user ]($style)'
+
 
 [directory]
 style = "fg:mantle bg:o2"
@@ -196,6 +198,8 @@ format = '[[ $time ](fg:mantle bg:o6)]($style)'
 disabled = false
 
 [character]
+format = """
+[╰─$symbol](fg:current_line) """
 disabled = false
 success_symbol = '[❯](bold fg:green)'
 error_symbol = '[❯](bold fg:red)'
@@ -208,3 +212,4 @@ vimcmd_visual_symbol = '[❮](bold fg:lavender)'
 min_time = 500
 style = 'fg:o2'
 format = ' [$duration]($style) '
+
