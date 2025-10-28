@@ -1,18 +1,21 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[ ](bg:o1)\
+[╭]()\
 $os\
 $username\
-[](bg:base fg:o1)\
-[](bg:o2 fg:base)\
+[](bg:base fg:o1)\
+[ ](bg:base)\
+[](bg:base fg:o2)\
 $directory\
-[](bg:base fg:o2)\
-[](bg:o3 fg:base)\
+[](bg:base fg:o2)\
+[ ](bg:base)\
+[](bg:base fg:o3)\
 $git_branch\
 $git_status\
-[](bg:base fg:o3)\
-[](bg:o4 fg:base)\
+[](bg:base fg:o3)\
+[ ](bg:base)\
+[](bg:base fg:o4)\
 $c\
 $rust\
 $golang\
@@ -21,15 +24,17 @@ $php\
 $java\
 $kotlin\
 $haskell\
-$python\
-[](bg:base fg:o4)\
-[](bg:o5 fg:base)\
+[](bg:base fg:o4)\
+[ ](bg:base)\
+[](bg:base fg:o5)\
 $docker_context\
-[](bg:base fg:o5)\
-[](bg:o6 fg:base)\
-$time\
-[](fg:o6)\
+[](bg:base fg:o5)\
+[ ](bg:base)\
 $fill\
+[ ](bg:base)\
+[](bg:base fg:o6)\
+$time\
+[](fg:o6)\
 $cmd_duration\
 $line_break$character"""
 
@@ -83,6 +88,7 @@ o5 = "#ffcb90"
 o6 = "#fff4df"
 
 [os]
+format = '(fg:current_line)[](fg:o1)[$symbol ](fg:mantle bg:o1)'
 disabled = true
 style = "bg:o1 fg:mantle"
 
@@ -108,10 +114,11 @@ Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
 
 [username]
+format = '(fg:current_line)[](fg:o1)[ $user ](fg:mantle bg:o1)'
 show_always = true
 style_user = "bg:o1 fg:mantle"
 style_root = "bg:o1 fg:mantle"
-format = '[ $user ]($style)'
+
 
 [directory]
 style = "fg:mantle bg:o2"
@@ -186,16 +193,27 @@ symbol = ""
 style = "bg:mantle"
 format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
 
+[fill]
+symbol = ''
+style = 'surface0'
+
 [time]
 disabled = false
 time_format = "%R"
 style = "bg:peach"
 format = '[[ $time ](fg:mantle bg:o6)]($style)'
 
+[cmd_duration]
+min_time = 500
+style = 'fg:o2'
+format = ' [$duration]($style) '
+
 [line_break]
 disabled = false
 
 [character]
+format = """
+[╰─$symbol](fg:current_line) """
 disabled = false
 success_symbol = '[❯](bold fg:green)'
 error_symbol = '[❯](bold fg:red)'
@@ -204,7 +222,5 @@ vimcmd_replace_one_symbol = '[❮](bold fg:purple)'
 vimcmd_replace_symbol = '[❮](bold fg:purple)'
 vimcmd_visual_symbol = '[❮](bold fg:lavender)'
 
-[cmd_duration]
-min_time = 500
-style = 'fg:o2'
-format = ' [$duration]($style) '
+
+
