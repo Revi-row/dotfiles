@@ -31,8 +31,8 @@ $docker_context\
 [ ](bg:base)\
 $fill\
 [ ](bg:base)\
-[](bg:base fg:o6)\
 $cmd_duration\
+[](bg:base fg:o6)\
 $time\
 $line_break$character"""
 
