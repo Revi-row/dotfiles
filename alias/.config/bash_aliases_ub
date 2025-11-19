@@ -1,6 +1,6 @@
     # Modificar y recargar bash
 alias reload_bash='source ~/.bashrc'
-alias aliases='code ~/.bash_aliases'
+alias aliases='code ~/.config/bash_aliases_ub'
 alias c='clear'
 
     # Instladores
@@ -18,3 +18,6 @@ alias zen='flatpak run app.zen_browser.zen'
 
     # Modificar apps
 alias conf='~/dotfiles/choose_config.sh'
+
+    #Acceso RDP
+alias rdp='xfreerdp +clipboard +fonts /sound /mic /size:1600x900 /network:auto /cert-ignore /u:yu /p:1223 /v:5.181.44.141 &'
