@@ -85,6 +85,13 @@ o4 = "#ffb76b"
 o5 = "#ffcb90"
 o6 = "#fff4df"
 
+p1 = "#9400D3"
+p2 = "#9370DB"
+p3 = "#DA70D6"
+p4 = "#DDA0DD"
+p5 = "#D8BFD8"
+p6 = "#E6E6FA"
+
 [os]
 format = '(fg:current_line)[](fg:o1)[$symbol ](fg:mantle bg:o1)'
 disabled = true
