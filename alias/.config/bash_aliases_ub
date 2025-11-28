@@ -15,6 +15,7 @@ alias snap='sudo snap install'
 
     # Apps
 alias zen='flatpak run app.zen_browser.zen'
+alias code='flatpak run com.vscodium.codium'
 
     # Modificar apps
 alias conf='~/dotfiles/choose_config.sh'
