@@ -77,11 +77,11 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bg:teal"
+style = "bg:green"
 format = '[[ $symbol $branch ](fg:black bg:green)]($style)'
 
 [git_status]
-style = "bg:teal"
+style = "bg:green"
 format = '[[($all_status$ahead_behind )](fg:black bg:green)]($style)'
 
 
@@ -92,49 +92,50 @@ format = '[[ $symbol( $version) ](fg:black bg:cyan)]($style)'
 
 [c]
 symbol = " "
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:cyan)]($style)'
+style = "bg:cyan"
+format = '[[ $symbol( $version) ](fg:black bg:cyan)]($style)'
 
 [rust]
 symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:cyan)]($style)'
+style = "bg:cyan"
+format = '[[ $symbol( $version) ](fg:black bg:cyan)]($style)'
 
 [golang]
 symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:cyan)]($style)'
+style = "bg:cyan"
+format = '[[ $symbol( $version) ](fg:black bg:cyan)]($style)'
 
 [php]
 symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:cyan)]($style)'
+style = "bg:cyan"
+format = '[[ $symbol( $version) ](fg:black bg:cyan)]($style)'
 
 [java]
 symbol = " "
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:cyan)]($style)'
+style = "bg:cyan"
+format = '[[ $symbol( $version) ](fg:black bg:cyan)]($style)'
 
 [kotlin]
 symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:cyan)]($style)'
+style = "bg:cyan"
+format = '[[ $symbol( $version) ](fg:black bg:cyan)]($style)'
 
 [haskell]
 symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:cyan)]($style)'
+style = "bg:cyan"
+format = '[[ $symbol( $version) ](fg:black bg:cyan)]($style)'
 
 [python]
 symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+style = "bg:cyan"
+format = '[[ $symbol( $version) ](fg:black bg:cyan)]($style)'
+
 
 [docker_context]
 disabled = false
 symbol = ""
 style = "bg:black"
-format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
+format = '[[ $symbol( $context) ](fg:#black bg:blue)]($style)'
 
 
 [fill]
@@ -144,14 +145,14 @@ style = 'white'
 
 [cmd_duration]
 min_time = 500
-style = 'fg:o2'
+style = 'fg:magenta'
 format = ' [$duration]($style) '
 
 
 [time]
 disabled = false
 time_format = "%R"
-style = "bg:peach"
+style = "bg:magenta"
 format = '[[ $time  ](fg:black bg:magenta)]($style)'
 
 
