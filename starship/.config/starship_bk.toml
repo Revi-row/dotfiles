@@ -1,8 +1,5 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-#-------------------------------------------------------------------
-# Format
-
 format = """
 $os\
 $username\
@@ -39,10 +36,49 @@ $cmd_duration\
 $time\
 $line_break$character"""
 
-#-------------------------------------------------------------------
-# Colors
-
 palette = 'ayu-iceberg'
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+orange = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#161616"
+mantle = "#181825"
+crust = "#11111b"
+
+o1 = "#ff7b00"
+o2 = "#ffad21"
+o3 = "#ffa652"
+o4 = "#ffb76b"
+o5 = "#ffcb90"
+o6 = "#fff4df"
+
+p1 = "#9400D3"
+p2 = "#9370DB"
+p3 = "#DA70D6"
+p4 = "#DDA0DD"
+p5 = "#D8BFD8"
+p6 = "#E6E6FA"
 
 [palettes.ayu-iceberg]
 text = "#bfbdb6"
@@ -58,8 +94,31 @@ cyan = "#89b8c2"
 blue = "#84a0c6"
 magenta = "#a093c7"
 
-#-------------------------------------------------------------------
-#Data
+[os]
+format = '(fg:current_line)[](fg:o1)[$symbol ](fg:mantle bg:red)'
+disabled = true
+style = "bg:o1 fg:mantle"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = ""
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
 
 [username]
 format = '(fg:current_line)[  $user ](fg:black bg:red)'
@@ -74,6 +133,12 @@ format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
 
 [git_branch]
 symbol = ""
@@ -84,11 +149,10 @@ format = '[[ $symbol $branch ](fg:black bg:green)]($style)'
 style = "bg:teal"
 format = '[[($all_status$ahead_behind )](fg:black bg:green)]($style)'
 
-
 [nodejs]
 symbol = ""
-style = "bg:cyan"
-format = '[[ $symbol( $version) ](fg:black bg:cyan)]($style)'
+style = "bg:teal"
+format = '[[ $symbol( $version) ](fg:base bg:cyan)]($style)'
 
 [c]
 symbol = " "
@@ -136,17 +200,14 @@ symbol = ""
 style = "bg:black"
 format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
 
-
 [fill]
 symbol = ''
 style = 'white'
-
 
 [cmd_duration]
 min_time = 500
 style = 'fg:o2'
 format = ' [$duration]($style) '
-
 
 [time]
 disabled = false
@@ -154,17 +215,16 @@ time_format = "%R"
 style = "bg:peach"
 format = '[[ $time  ](fg:black bg:magenta)]($style)'
 
-
 [line_break]
 disabled = false
 
-
 [character]
-#format = """[╰─$symbol](fg:white) """
+format = """
+[╰─$symbol](fg:surface1) """
 disabled = false
-success_symbol = '[ ❯](bold fg:green)'
-error_symbol = '[ ❯](bold fg:red)'
-vimcmd_symbol = '[ ❮](bold fg:green)'
-vimcmd_replace_one_symbol = '[ ❮](bold fg:purple)'
-vimcmd_replace_symbol = '[ ❮](bold fg:purple)'
-vimcmd_visual_symbol = '[ ❮](bold fg:lavender)'
+success_symbol = '[❯](bold fg:green)'
+error_symbol = '[❯](bold fg:red)'
+vimcmd_symbol = '[❮](bold fg:green)'
+vimcmd_replace_one_symbol = '[❮](bold fg:purple)'
+vimcmd_replace_symbol = '[❮](bold fg:purple)'
+vimcmd_visual_symbol = '[❮](bold fg:lavender)'
