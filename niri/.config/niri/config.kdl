@@ -8,6 +8,8 @@
 // https://yalter.github.io/niri/Configuration:-Input
 
 prefer-no-csd
+// Elimina los encabezados de las aplicaciones
+
 
 input {
     keyboard {
