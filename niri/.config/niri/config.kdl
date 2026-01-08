@@ -8,8 +8,6 @@
 // https://yalter.github.io/niri/Configuration:-Input
 
 prefer-no-csd
-// Elimina los encabezados de las aplicaciones
-
 
 input {
     keyboard {
@@ -364,7 +362,7 @@ binds {
 
     // Mod-Shift-/, which is usually the same as Mod-?,
     // shows a list of important hotkeys.
-    Mod+Shift+Ñ { show-hotkey-overlay; }
+    Mod+Shift+O { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: Kitty" { spawn "kitty"; }
