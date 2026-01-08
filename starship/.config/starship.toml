@@ -84,15 +84,15 @@ p6 = "#E6E6FA"
 text = "#bfbdb6"
 background = "#0b0e14"
 
-black = "#1e2132"
-red = "#e27878"
-green = "#b4be82"
-yellow = "#e2a478"
-blue = "#84a0c6"
-magenta = "#a093c7"
-cyan = "#89b8c2"
+black = "#1e2132" 
 white = "#c6c8d1"
 
+red = "#e27878"
+yellow = "#e2a478"
+green = "#b4be82"
+cyan = "#89b8c2"
+blue = "#84a0c6"
+magenta = "#a093c7"
 
 [os]
 format = '(fg:current_line)[](fg:o1)[$symbol ](fg:mantle bg:red)'
@@ -202,7 +202,7 @@ format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
 
 [fill]
 symbol = ''
-style = 'surface1'
+style = 'white'
 
 [cmd_duration]
 min_time = 500
