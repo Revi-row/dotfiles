@@ -125,7 +125,7 @@ button selected {
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     1;
+    columns:                     2;
     lines:                       7;
     cycle:                       true;
     dynamic:                     true;
