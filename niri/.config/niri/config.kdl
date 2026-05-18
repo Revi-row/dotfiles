@@ -21,6 +21,13 @@ input {
     focus-follows-mouse max-scroll-amount="0%"
 }
 
+// ~~~~~~~~~~ CURSOR ~~~~~~~~~~ //
+
+cursor {
+//    xcursor-size 30
+//    xcursor-theme "Nordzy-cursor"
+}
+
 // ~~~~~~~~~~ MONITORS ~~~~~~~~~~ //
 
 output "HDMI-A-1" {
@@ -36,8 +43,39 @@ output "DP-1" {
 
 // ~~~~~~~~~~ LAYOUT ~~~~~~~~~~ /
 
+overview{
+    zoom 0.70
+    backdrop-color "#222436";
+    workspace-shadow{
+        //off
+        softness 40
+        spread 10
+        offset x=0 y=10
+        color "#00000050"
+    }
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+layer-rule{
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+    background-effect {
+        xray true
+        blur true
+        noise 0.05
+        saturation 3
+    }
+
+}
+
 layout {
-    gaps 5
+    gaps 10
+    background-color "transparent"
     center-focused-column "never"
     always-center-single-column
     preset-column-widths {
@@ -49,22 +87,22 @@ layout {
     default-column-width { proportion 0.66667; }
 
     focus-ring {
-        width 0.5
-        active-color "#7fc8ff"
+        width 2
+        active-color "#fca7ea"
         inactive-color "#505050"
     }
 
     border {
-        off
+        on
 
-        width 4
+        width 1
         active-color "#ffc87f"
-        inactive-color "#505050"
+        inactive-color "#1e2030"
         urgent-color "#9b0000"
     }
 
     shadow {
-        //on
+        off
         softness 30
         spread 5
         offset x=0 y=5
@@ -73,13 +111,20 @@ layout {
 }
 
 animations {
-
+    workspace-switch {
+        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+    }
+    window-open {
+        duration-ms 150
+        curve "cubic-bezier" 0.05 0.7 0.1 1
+    }
 }
 
 // ~~~~~~~~~~ STARTUP ~~~~~~~~~~ //
 
-spawn-sh-at-startup "swaybg -i ~/Imágenes/Wallpapers/wallpaper4.png -m fill"
+spawn-sh-at-startup "swaybg -i ~/Imágenes/Wallpapers/wallpaper2.png -m fill"
 spawn-sh-at-startup "qs -c ~/.config/quickshell/noctalia-shell/"
+spawn-sh-at-startup "obsidian"
 
 hotkey-overlay {
     skip-at-startup
