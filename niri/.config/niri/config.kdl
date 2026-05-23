@@ -62,14 +62,14 @@ gestures {
 }
 
 layer-rule{
-    match namespace="^wallpaper$"
+    match namespace="^noctalia-overview*"
     place-within-backdrop true
-    background-effect {
-        xray true
-        blur true
-        noise 0.05
-        saturation 3
-    }
+    //background-effect {
+    //   xray true
+    //    blur true
+    //    noise 0.05
+    //    saturation 3
+    //}
 
 }
 
@@ -209,6 +209,7 @@ window-rule{
     open-on-workspace "3"
     open-maximized true
 }
+
 
 // ~~~~~~~~~~ KEY BINDS ~~~~~~~~~~ //
 
@@ -453,7 +454,7 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Print { screenshot; }
+    Mod+P { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
