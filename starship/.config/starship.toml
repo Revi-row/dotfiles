@@ -42,7 +42,7 @@ $line_break$character"""
 #-------------------------------------------------------------------
 # Colors
 
-palette = 'ayu-iceberg'
+palette = 'tokyo-night'
 
 [palettes.ayu-iceberg]
 text = "#bfbdb6"
@@ -57,6 +57,20 @@ green = "#b4be82"
 cyan = "#89b8c2"
 blue = "#84a0c6"
 magenta = "#a093c7"
+
+[palettes.tokyo-night]
+text = "#a9b1d6"
+background = "#1a1b26"
+
+black = "#414868" 
+white = "#c0caf5"
+
+red = "#f7768e"
+yellow = "#e0af68"
+green = "#73daca"
+cyan = "#7dcfff"
+blue = "#7aa2f7"
+magenta = "#bb9af7"
 
 #-------------------------------------------------------------------
 #Data
